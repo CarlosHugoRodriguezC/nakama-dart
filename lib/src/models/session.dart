@@ -34,10 +34,10 @@ class Session with _$Session {
           : {},
       userId: token['uid'] as String,
       expiresAt: DateTime.fromMillisecondsSinceEpoch(
-        token['exp'] as int,
+        1000 * token['exp'] as int,
       ),
       refreshExpiresAt: DateTime.fromMillisecondsSinceEpoch(
-        refreshToken['exp'] as int,
+        1000 * refreshToken['exp'] as int,
       ),
     );
   }
@@ -57,10 +57,10 @@ class Session with _$Session {
           : {},
       userId: token['uid'] as String,
       expiresAt: DateTime.fromMillisecondsSinceEpoch(
-        token['exp'] as int,
+        1000 * token['exp'] as int,
       ),
       refreshExpiresAt: DateTime.fromMillisecondsSinceEpoch(
-        refreshToken['exp'] as int,
+        1000 * refreshToken['exp'] as int,
       ),
     );
   }
